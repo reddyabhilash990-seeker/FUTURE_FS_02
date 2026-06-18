@@ -13,7 +13,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [leads, setLeads] = useState([]);
   const loadData = async () => {
-    const response = await fetch("http://localhost:5000/");
+    const response = await fetch("https://crm-backend-ta5h.onrender.com/");
     const data = await response.json();
     setLeads(data);
   };

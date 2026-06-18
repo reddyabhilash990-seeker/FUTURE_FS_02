@@ -20,7 +20,7 @@ function LeadForm() {
     e.preventDefault();
 
     const response = await fetch(
-      "http://localhost:5000/leads",
+      "https://crm-backend-ta5h.onrender.com/",
       {
         method: "POST",
         headers: {

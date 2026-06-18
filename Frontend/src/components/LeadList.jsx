@@ -7,7 +7,7 @@ function LeadList() {
     const [filterStatus, setFilterStatus] = useState("All");
     const [selectedLead, setSelectedLead] = useState(null);
     const loadData = async () => {
-        const response = await fetch("http://localhost:5000/");
+        const response = await fetch("https://crm-backend-ta5h.onrender.com/");
         const data = await response.json();
         setLeads(data);
     };
@@ -133,7 +133,7 @@ function LeadList() {
                                             }
                                             onChange={async (e) => {
                                                 await fetch(
-                                                    `http://localhost:5000/leads/${lead.id}`,
+                                                    `"https://crm-backend-ta5h.onrender.com/"${lead.id}`,
                                                     {
                                                         method: "PUT",
                                                         headers: {
@@ -173,7 +173,7 @@ function LeadList() {
                                                 if (!newName) return;
 
                                                 await fetch(
-                                                    `http://localhost:5000/leads/${lead.id}`,
+                                                    `"https://crm-backend-ta5h.onrender.com/"/${lead.id}`,
                                                     {
                                                         method: "PUT",
                                                         headers: {
@@ -206,7 +206,7 @@ function LeadList() {
                                                 if (!confirmDelete) return;
 
                                                 await fetch(
-                                                    `http://localhost:5000/leads/${lead.id}`,
+                                                    `"https://crm-backend-ta5h.onrender.com/"${lead.id}`,
                                                     {
                                                         method: "DELETE"
                                                     }
